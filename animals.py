@@ -1,8 +1,8 @@
 import sqlite3
 
-# Create empty database named PetHavenDatabase (.db indicates database)
+# Create empty database named AnimalDatabase (.db indicates database)
 # When you click the db file it will not be readable to people
-connection = sqlite3.connect("PetHavenDatabase.db")
+connection = sqlite3.connect("AnimalDatabase.db")
 
 cursor = connection.cursor()    # Allows us to use SQL commands
 
