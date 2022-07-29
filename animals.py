@@ -17,8 +17,6 @@ class Animal():
         self.createOtherTable()     # Create subclass 3 table (Other)
     
     # Create base class table (Animal)
-    # NOTE: Feel free to change the domains
-    # NOTE: Didn't add a reference (foreign key) for kennelID for now
     def createAnimalTable(self):
         # Create new table (checks if the table already exists) in database
         self.cursor.execute("""CREATE TABLE IF NOT EXISTS Animal(
@@ -83,7 +81,7 @@ class Animal():
 
         self.connection.commit()    # Commit to actual database when inserting
 
-    # Sort the animals by the animal which was born first
+    # Sort the animals by their date of birth
     def sortAnimalsByDOB(self, orderType):
         if orderType == "Descending":
             print("Animals sorted by descending DOB:")
@@ -177,6 +175,5 @@ animal.getAnimalNameFromID("47978637")
 # Print animals based on sex
 animal.getAnimalsBasedOnSex('F')
 animal.getAnimalsBasedOnSex('M')
-
 
 connection.close()  # Terminate connection
